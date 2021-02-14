@@ -36,17 +36,24 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Enemies\Minion\HealthBar.cs" />
-     <Compile Include="Assets\Scripts\Enemies\Minion\Minion.cs" />
-     <Compile Include="Assets\Scripts\Enemies\Minion\MinionMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyType1.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyType2.cs" />
+     <Compile Include="Assets\Scripts\Enemy\HealthBar.cs" />
      <Compile Include="Assets\Scripts\GameManager\GameStatus.cs" />
-     <Compile Include="Assets\Scripts\GameManager\LivesUI.cs" />
-     <Compile Include="Assets\Scripts\GameManager\MoneyUI.cs" />
+     <Compile Include="Assets\Scripts\GameManager\PlayerStatus.cs" />
+     <Compile Include="Assets\Scripts\GameManager\UI\LivesUI.cs" />
+     <Compile Include="Assets\Scripts\GameManager\UI\MoneyUI.cs" />
+     <Compile Include="Assets\Scripts\GameManager\Wave.cs" />
      <Compile Include="Assets\Scripts\GameManager\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\GameManager\WayPoints.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerStatus.cs" />
      <Compile Include="Assets\Scripts\Towers\Bullet.cs" />
-     <Compile Include="Assets\Scripts\Towers\TowerController.cs" />
+     <Compile Include="Assets\Scripts\Towers\BulletType1.cs" />
+     <Compile Include="Assets\Scripts\Towers\BulletType2.cs" />
+     <Compile Include="Assets\Scripts\Towers\Tower.cs" />
+     <Compile Include="Assets\Scripts\Towers\TowerType1.cs" />
+     <Compile Include="Assets\Scripts\Towers\TowerType2.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2019.4.19f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

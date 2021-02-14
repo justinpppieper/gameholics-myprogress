@@ -7,15 +7,10 @@ public class GameStatus : MonoBehaviour
 
     private bool gameOver = false;
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if (gameOver) return;
-        if(PlayerStatus.lives <= 0) GameOver();
+        if (PlayerStatus.lives <= 0) GameOver();
     }
 
     private void GameOver() {

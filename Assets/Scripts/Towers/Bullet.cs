@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private Transform target;
+    protected Transform target;
 
-    public float speed = 5.0f;
-    public int damage = 20;
-    public float slowPercent = 0.3f;
+    protected float speed;
+    protected int damage;
+    protected float slowPercent;
 
     public void LocateTarget (Transform _target) {
         target = _target;
     }
 
-    void Update() {
+    private void Update() {
         if (target == null) {
             Destroy(gameObject);
             return;
@@ -33,10 +33,7 @@ public class Bullet : MonoBehaviour
         transform.Translate(direction.normalized * distanceThisFrame, Space.World);
     }
 
-    void HitTarget() {
+    protected virtual void HitTarget() {
         Destroy(gameObject);
-        target.GetComponent<Minion>().TakeDamage(damage);
-        target.GetComponent<Minion>().SlowDown(slowPercent);
-
     }
 }

@@ -1,47 +1,65 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class WaveSpawner : MonoBehaviour
 {
+    public static int aliveEnemyNumber;
 
-    public Transform minionPrefab;
     public Transform spawnPoint;
+    public Wave[] waves;
 
-    public float timeBetweenWaves;
-    private float countdown;
+    public float timeBetweenWaves = 5.0f;
+    private float countdown = 2.0f;
+    private int waveIndex = 0;
 
-    private int waveIndex;
+    // public Text waveCountdownText;
 
-    void Start()
-    {
-        timeBetweenWaves = 5.0f;
-        countdown = 2.0f; 
-        waveIndex = 1;  
-    }
 
     void Update()
     {
+        if (aliveEnemyNumber > 0) {
+            return;
+        }
+
+        if (waveIndex == waves.Length) {
+            return;
+        }
+
         if (countdown <= 0.0f) {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
+            return;
         }
 
-        countdown -= Time.deltaTime;     
+        countdown -= Time.deltaTime;
+
+        countdown = Mathf.Clamp(countdown, 0.0f, Mathf.Infinity);
+
+        // waveCountdownText.text = string.Format("{0:00.00}", countdown);
     }
 
     IEnumerator SpawnWave() {
-        waveIndex ++;
 
-        for (int i = 0; i < waveIndex; i++)
+        // PlayerStatus.Rounds++ ;
+
+        Wave wave = waves[waveIndex];
+
+        aliveEnemyNumber = wave.count;
+
+        for (int i = 0; i < wave.count; i++)
         {
-            SpawnMinion(); 
-            yield return new WaitForSeconds(0.7f);
+            SpawnEnemy(wave.enemy); 
+            yield return new WaitForSeconds(1.0f / wave.rate);
         }
-        
+
+        waveIndex++;     
     }
 
-    void SpawnMinion() {
-        Instantiate(minionPrefab, spawnPoint.position, spawnPoint.rotation);
+    void SpawnEnemy(GameObject enemy) {
+        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+        // aliveEnemyNumber++;
     }
 }
