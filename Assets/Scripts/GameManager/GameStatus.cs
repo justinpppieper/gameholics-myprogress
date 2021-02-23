@@ -5,16 +5,32 @@ using UnityEngine;
 public class GameStatus : MonoBehaviour
 {
 
-    private bool gameOver = false;
+    public static bool gameOver;
+    public string nextLevelName = "Level2";
+    public int nextLevel = 2;
+    public SceneFader sceneFader;
 
-    void Update()
+    private void Start()
     {
-        if (gameOver) return;
-        if (PlayerStatus.lives <= 0) GameOver();
+        gameOver = false;
     }
 
-    private void GameOver() {
+    private void Update()
+    {
+        if (gameOver) return;
+        if (PlayerStatus.lives <= 0) EndGame();
+    }
+
+    public void EndGame()
+    {
         gameOver = true;
-        Debug.Log("Game Over");         
+        Debug.Log("Game Over");
+    }
+
+    public void WinLevel()
+    {
+        Debug.Log("win level");
+        PlayerPrefs.SetInt("levelReached", nextLevel);
+        sceneFader.FadeToScene(nextLevelName);
     }
 }

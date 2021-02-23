@@ -43,17 +43,21 @@
      <Compile Include="Assets\Scripts\Enemy\HealthBar.cs" />
      <Compile Include="Assets\Scripts\GameManager\GameStatus.cs" />
      <Compile Include="Assets\Scripts\GameManager\PlayerStatus.cs" />
-     <Compile Include="Assets\Scripts\GameManager\UI\LivesUI.cs" />
-     <Compile Include="Assets\Scripts\GameManager\UI\MoneyUI.cs" />
      <Compile Include="Assets\Scripts\GameManager\Wave.cs" />
      <Compile Include="Assets\Scripts\GameManager\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\GameManager\WayPoints.cs" />
      <Compile Include="Assets\Scripts\Towers\Bullet.cs" />
      <Compile Include="Assets\Scripts\Towers\BulletType1.cs" />
      <Compile Include="Assets\Scripts\Towers\BulletType2.cs" />
+     <Compile Include="Assets\Scripts\Towers\BulletType3.cs" />
      <Compile Include="Assets\Scripts\Towers\Tower.cs" />
      <Compile Include="Assets\Scripts\Towers\TowerType1.cs" />
      <Compile Include="Assets\Scripts\Towers\TowerType2.cs" />
+     <Compile Include="Assets\Scripts\Towers\TowerType3.cs" />
+     <Compile Include="Assets\Scripts\UI\LevelSelector.cs" />
+     <Compile Include="Assets\Scripts\UI\LivesUI.cs" />
+     <Compile Include="Assets\Scripts\UI\MoneyUI.cs" />
+     <Compile Include="Assets\Scripts\UI\SceneFader.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2019.4.19f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -236,12 +240,6 @@
     </Reference>
     <Reference Include="UnityEditor">
         <HintPath>/Applications/Unity/Hub/Editor/2019.4.19f1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-        <HintPath>/Applications/Unity/Hub/Editor/2019.4.19f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-        <HintPath>/Applications/Unity/Hub/Editor/2019.4.19f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>/Applications/Unity/Hub/Editor/2019.4.19f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
