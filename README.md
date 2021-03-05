@@ -1,5 +1,6 @@
-## Week 5 Progress
-### Accomplished 
+# A tower defense game hehe
+
+## Week 4 & Week 5
 #### Enemy
 1. reduce HP when shooted by *damage bullet*
 2. slow down when shooted by *slowdown bullet*
@@ -26,3 +27,70 @@ customize route(no change since week4)
 
 #### System
 Rewrite *Enemy, Tower, Bullet* to inheritance structure, easy to add more types.
+
+
+
+## Week 6: Integrations & Menus
+
+### System Integration
+
+#### Folder Structure
+
+- Animations
+  - UI: for all the animations related to UI (e.g. Button.controller)
+  - Enemy
+  - etc.
+- Font (hardly changing)
+- Prefabs
+  - UI: for all prefabs related to UI (e.g. LevelButton.prefab)
+  - Enemy
+  - Tower
+  - etc.
+- Scenes (hardly changing)
+- Scripts
+  - Game Manager: for all scripts related to game mechanism management (e.g. GameStatus.cs)
+  - UI: for all scripts related to UI Canvas, etc.
+  - Enemy
+  - Tower
+  - etc.
+- Sprites
+  - Others: for game public components (e.g. HealthBar.png)
+  - Enemy
+  - Tower
+  - Tiles: only for tilemap sprites
+  - etc.
+- Tilemap (only for tailmap palette)
+
+### Github Integration
+
+- Assets
+- Pakages
+- ProjectSettings
+- .gitignore
+- README.md
+
+### Menus
+
+- Connect scene by SceneFader component
+
+- Menus (all functions work)
+
+  1. Pause Menu(Press Space to trigger)
+     - Back Button
+     - Restart Button
+     - Main Menu Button
+
+  2. Win Level Menu
+     - display rounds survived
+     - Next Level Button
+     - Main Menu Button
+
+  3. Win Game Menu
+     - display rounds survived
+     - Main Menu Button
+
+  4. Level Selector Menu
+     - Level selector buttons: pass current level to unlock the next level
+     - Reset Button: reset game progress; only level 1 is unlocked
+
+## Week 7: Well I guess I would not have any progress this week......lue
