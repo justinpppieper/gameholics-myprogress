@@ -1,6 +1,6 @@
-# A tower defense game hehe
+# My progress of CSCI526
 
-## Week 4 & Week 5
+## Week 3 - 5
 #### Enemy
 1. reduce HP when shooted by *damage bullet*
 2. slow down when shooted by *slowdown bullet*
@@ -93,4 +93,21 @@ Rewrite *Enemy, Tower, Bullet* to inheritance structure, easy to add more types.
      - Level selector buttons: pass current level to unlock the next level
      - Reset Button: reset game progress; only level 1 is unlocked
 
-## Week 7: Well I guess I would not have any progress this week......lue
+## Week 7: Gameover System & Gameover Menu
+
+Pause Menu(Press Space to trigger)
+
+- Restart Button
+- Main Menu Button
+
+After game over menu show up the game in the background is still playing, we can add a boolean value to determine is game is over, and disable some classes in their update function.
+
+## Week 8: Drew pictures of towers
+
+<img src="./images/trojan.png" alt="" width="50%" />
+
+<img src="./images/vkc.png" alt="" width="50%" />
+
+<img src="./images/village.png" alt="" width="50%" />
+
+<img src="./images/bovard.png" alt="" width="50%" />

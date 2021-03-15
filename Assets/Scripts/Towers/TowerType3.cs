@@ -2,20 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerType1 : Tower
+public class TowerType3 : Tower
 {
     public void Start()
     {
-        price = 20;
-        range = 3.0f;
-        fireRate = 3.0f;
+        range = 2.0f;
+        fireRate = 2.0f;
         InvokeRepeating("UpdateTarget", 0.0f, 0.5f); // invoke UpdateTarget() every 0.5 seconds starts from 0 second
     }
 
     protected override void Shoot()
     {
         GameObject bulletInst = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Bullet bullet = bulletInst.GetComponent<BulletType1>();
+        Bullet bullet = bulletInst.GetComponent<BulletType3>();
 
         if (bullet != null)
         {
