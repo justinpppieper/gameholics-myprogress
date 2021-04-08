@@ -19,7 +19,7 @@
 <body>
     <nav>
         <span class="logo">Gameholics</span>
-        <ul>
+        <ul id="ul" class="nav-list">
             <li><a href="#home">Home</a></li>
             <li><a href="#gameplay">Gameplay</a></li>
             <li><a href="#artwork">Artwork</a></li>
@@ -27,6 +27,8 @@
             <li><a href="#team">Team</a></li>
             <li><a href="#links">Links</a></li>
         </ul>
+        <i class="bi bi-list hamburger" id="toggle-icon" onclick="toggleNavList()"></i>
+
         <!-- <a href="#team"><button>Contact Us</button></a> -->
     </nav>
 
@@ -48,11 +50,11 @@
             <div class="gameplay">
                 <div class="title">about our game</div>
                 <div class="box-container">
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
+                    <div class="box" style="background-image: url(./public/map1.png)"></div>
+                    <div class="box" style="background-image: url(./public/map2.png)"></div>
+                    <div class="box" style="background-image: url(./public/map3.png)"></div>
+                    <div class="box" style="background-image: url(./public/map4.png)"></div>
+                    <div class="box" style="background-image: url(./public/map5.png)"></div>
                 </div>
                 <div class="content-container">
                     <p class="p1">Engineering</p>
@@ -70,9 +72,24 @@
 
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./public/artwork-1.png"></div>
-                        <div class="swiper-slide"><img src="./public/artwork-2.png"></div>
-                        <div class="swiper-slide"><img src="./public/artwork-3.png"></div>
+
+                        <div class="swiper-slide"><img src="./public/art1.png"></div>
+                        <div class="swiper-slide"><img src="./public/art5.png"></div>
+
+                        <div class="swiper-slide"><img src="./public/art2.png"></div>
+                        <div class="swiper-slide"><img src="./public/art6.png"></div>
+
+                        <div class="swiper-slide"><img src="./public/art3.png"></div>
+                        <div class="swiper-slide"><img src="./public/art7.png"></div>
+
+                        <div class="swiper-slide"><img src="./public/art8.png"></div>
+                        <div class="swiper-slide"><img src="./public/art9.png"></div>
+                        <div class="swiper-slide"><img src="./public/art10.png"></div>
+                        <div class="swiper-slide"><img src="./public/art11.png"></div>
+                        <div class="swiper-slide"><img src="./public/art12.png"></div>
+
+                        <div class="swiper-slide"><img src="./public/art0.png"></div>
+                        <div class="swiper-slide"><img src="./public/art4.png"></div>
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -109,7 +126,7 @@
                         </div>
                         <div class="intro">
                             <div class="name">Cheng Zhou</div>
-                            <div class="content">duties</div>
+                            <div class="content">Game Programmer. Designed and implemented lottery shop. Integrated shop with game.</div>
                         </div>
                         <div class="more">
                             <a href=""><i class="bi bi-linkedin"></i></a>
@@ -123,11 +140,11 @@
                         </div>
                         <div class="intro">
                             <div class="name">Donghao Feng</div>
-                            <div class="content">duties</div>
+                            <div class="content">Game Programmer and Animator. Created animation for enemies and towers. Worked on enemy movements feature, menus GUI and debugging.</div>
                         </div>
                         <div class="more">
                             <a href=""><i class="bi bi-linkedin"></i></a>
-                            <a href=""><i class="bi bi-github"></i></a>
+                            <a href="https://github.com/donghaof"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
 
@@ -137,11 +154,11 @@
                         </div>
                         <div class="intro">
                             <div class="name">Ruicheng Li</div>
-                            <div class="content">duties</div>
+                            <div class="content">Team Leader. Game Producer. Worked on game high-level design, game balancing and weekly presentions.</div>
                         </div>
                         <div class="more">
                             <a href=""><i class="bi bi-linkedin"></i></a>
-                            <a href=""><i class="bi bi-github"></i></a>
+                            <a href="https://github.com/rc-li"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
 
@@ -151,11 +168,11 @@
                         </div>
                         <div class="intro">
                             <div class="name">Ruoxuan Wang</div>
-                            <div class="content">duties</div>
+                            <div class="content">Game Programmer. Worked on game features, including waves, paths, game status, player status, menus, etc., also level maps and debugging. </div>
                         </div>
                         <div class="more">
                             <a href=""><i class="bi bi-linkedin"></i></a>
-                            <a href=""><i class="bi bi-github"></i></a>
+                            <a href="https://github.com/penguindoggy"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -167,11 +184,11 @@
                         </div>
                         <div class="intro">
                             <div class="name">Sheng Luo</div>
-                            <div class="content">duties</div>
+                            <div class="content">Game Programmer. Worked on tower placement feature, main menu features and GUI, sound effect and volume adjustment.</div>
                         </div>
                         <div class="more">
                             <a href=""><i class="bi bi-linkedin"></i></a>
-                            <a href=""><i class="bi bi-github"></i></a>
+                            <a href="https://github.com/legendsheng"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
 
@@ -181,11 +198,11 @@
                         </div>
                         <div class="intro">
                             <div class="name">Shuqi Xiao</div>
-                            <div class="content">duties</div>
+                            <div class="content">Game Programmer. Worked on tower and enemy character features, level maps, sound effect and menus GUI.</div>
                         </div>
                         <div class="more">
                             <a href=""><i class="bi bi-linkedin"></i></a>
-                            <a href=""><i class="bi bi-github"></i></a>
+                            <a href="https://github.com/xiaoshq"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
 
@@ -195,11 +212,11 @@
                         </div>
                         <div class="intro">
                             <div class="name">Xinrui Lyu</div>
-                            <div class="content">duties</div>
+                            <div class="content">Game Artist. Designed and created 2D images of characters. Worked on cutscene animation and tower upgrade feature.</div>
                         </div>
                         <div class="more">
                             <a href=""><i class="bi bi-linkedin"></i></a>
-                            <a href=""><i class="bi bi-github"></i></a>
+                            <a href="https://github.com/SherryLxr"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
 
@@ -209,11 +226,11 @@
                         </div>
                         <div class="intro">
                             <div class="name">Yaqi Han</div>
-                            <div class="content">duties</div>
+                            <div class="content">Audio Engineer. Worked on background music, sound effect, cutscene animation and tower upgrade feature. Polished artwork.</div>
                         </div>
                         <div class="more">
                             <a href=""><i class="bi bi-linkedin"></i></a>
-                            <a href=""><i class="bi bi-github"></i></a>
+                            <a href="https://github.com/YaqiHan"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
                 </div>
